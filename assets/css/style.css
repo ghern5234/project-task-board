@@ -14,3 +14,7 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+
+.addYellow {
+  background-color: yellow;
+}
