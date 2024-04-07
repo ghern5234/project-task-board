@@ -18,3 +18,7 @@ body {
 .addYellow {
   background-color: yellow;
 }
+
+.addRed {
+  background-color: red;
+}
