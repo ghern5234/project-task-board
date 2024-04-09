@@ -176,28 +176,23 @@ function handleDeleteTask(event) {
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
-  console.log("This is task lis in handledrop = ", taskList);
 
-// Get the project id from the event
+// Get the project id from the event(task card being moved)
   const taskId = ui.draggable[0].dataset.id;
-  console.log("This is the id of the draageble card = ", taskId);
 
 // Get the id of the lane that the card was dropped into
-  console.log(event.target);
   const newStatus = event.target.id;
-  console.log(newStatus);
 
+ // Iterate through task info
   for (let i = 0; i < taskList.length; i++) {
-    console.log(taskList[i]);
     if (taskId == taskList[i].id) {
-      console.log("match!!!!!");
       taskList[i].status = newStatus;
+// Updating new status to local storage      
+      localStorage.setItem("tasks", JSON.stringify(taskList));
       renderTaskList();
     }
   }
 
-// Testing - Todo: Get the task status from the event //////
-//   const taskStatus = event.target.status
  
 }
 
