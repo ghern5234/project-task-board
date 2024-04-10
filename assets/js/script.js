@@ -1,7 +1,6 @@
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
-console.log(nextId);
 
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
@@ -153,7 +152,6 @@ function handleAddTask(event) {
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
-  console.log("This is inside delete task");
 
 //Create a varibale containing the id of the targeted task to delete
   const idToDelete = event.target.dataset.projectid;
